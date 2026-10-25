@@ -1,0 +1,17 @@
+{
+  "name": "miicycle-backend",
+  "version": "1.0.0",
+  "description": "謐月 MiiCycle 輕量後端：版本檢查 + CMS 衛教 Tip",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  }
+}
