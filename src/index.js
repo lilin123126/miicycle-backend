@@ -59,8 +59,8 @@ export default {
       const platform = url.searchParams.get('platform') || 'android';
       const v = url.searchParams.get('version') || '0.0.0';
       const cfg = VERSION[platform] || VERSION.android;
-      const needUpdate = !gte(cfg.latest, v);
-      const forceUpdate = cfg.forceUpdate || !gte(cfg.min, v);
+      const needUpdate = !gte(v, cfg.latest); // current < latest → 要更新
+      const forceUpdate = cfg.forceUpdate || !gte(v, cfg.min);
       return json({
         platform,
         current: v,
